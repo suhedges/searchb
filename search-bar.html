@@ -1,51 +1,857 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Bar</title>
+    <title>
+      Brands Catalog
+    </title>
     <style>
-        .search-bar-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .search-bar {
-            width: 50%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.3s ease-in-out;
-        }
-
-        .search-bar:focus {
-            border-color: #007bff;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .catalog-title {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 2em;
+        font-weight: bold;
+        color: #7FA2B6;
+      }
+      .search-bar-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+      .search-bar {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease-in-out;
+      }
+      .search-bar:focus {
+        border-color: #007bff;
+      }
+      .catalog-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+      .catalog-item {
+        flex: 0 0 calc(16.66% - 20px);
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 10px;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        overflow: hidden;
+        text-align: center;
+        max-width: 250px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .catalog-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+        border-bottom: 1px solid #ddd;
+      }
+      .catalog-item:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+      }
+      .catalog-item:hover img {
+        transform: scale(1.05);
+      }
+      .catalog-item a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.2em;
+        transition: color 0.3s ease-in-out;
+      }
+      .catalog-item a:hover {
+        color: #007bff;
+      }
     </style>
-</head>
-<body>
-    <div class="search-bar-container">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="catalog-title">
+        BRAND CATALOGS
+      </h1>
+      <div class="search-bar-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Search for brands...">
+      </div>
+      <div class="catalog-container" id="catalogContainer">
+        <div class="catalog-item" data-brand="ABB">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Control.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/ABB 1.jpg" alt="ABB" class="img-responsive">
+            ABB
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="ABC">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/ABC-Catalog2014.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/ABC 1.jpg" alt="ABC" class="img-responsive">
+            ABC
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AERVOE">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Aervoe-Industrial-Catalog1.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AERVOE 1.jpg" alt="AERVOE" class="img-responsive">
+            AERVOE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AETNA">
+          <a href="Aetna" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AETNA1.jpg" alt="AETNA" class="img-responsive">
+            AETNA
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AIE">
+          <a href="AIE" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AIE1.jpg" alt="AIE" class="img-responsive">
+            AIE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AIR MASTER">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/60470.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AIR MASTER 1.jpg" alt="AIR MASTER" class="img-responsive">
+            AIR MASTER
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AIRpipe">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/2019-AIRpipe-USA-Master-Catalog_9_2019.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AIRpipe 1.jpg" alt="AIRpipe" class="img-responsive">
+            AIRpipe
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AMI">
+          <a href="AMI" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AMI 1.jpg" alt="AMI" class="img-responsive">
+            AMI
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AMERICAN COUPLING">
+          <a href="" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AMERICAN COUPLING 1.jpg" alt="AMERICAN COUPLING" class="img-responsive">
+            AMERICAN COUPLING
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AMERICAN CYLINDER">
+          <a href="AmericanCylinder" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AMERICAN CYLINDER 1.jpg" alt="AMERICAN CYLINDER" class="img-responsive">
+            AMERICAN CYLINDER
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AMERIDRIVES">
+          <a href="Ameridrives" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AMERIDRIVES 1.jpg" alt="AMERIDRIVES" class="img-responsive">
+            AMERIDRIVES
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="APG">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/APG O-Ring Handbook.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/APG 1.jpg" alt="APG" class="img-responsive">
+            APG
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="AURORA">
+          <a href="Aurora" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/AURORA1.jpg" alt="AURORA" class="img-responsive">
+            AURORA
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BANDO">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/BANDO CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BANDO 1.jpg" alt="BANDO" class="img-responsive">
+            BANDO
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BALDOR">
+          <a href="Baldor" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BALDOR 1.jpg" alt="BALDOR" class="img-responsive">
+            BALDOR
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BARDEN">
+          <a href="Barden" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BARDEN 1.jpg" alt="BARDEN" class="img-responsive">
+            BARDEN
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BERLISS">
+          <a href="Berliss" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BERLISS 1.jpg" alt="BERLISS" class="img-responsive">
+            BERLISS
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BESTORQ">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/2020-Bestorq-V-Belts-Catalog-Catalogue-Metric-Timing-BeltSmart.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BESTORQ1.jpg" alt="BESTORQ" class="img-responsive">
+            BESTORQ
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BISHOP WISECARVER">
+          <a href="BishopWisecarver" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BISHOP WISECARVER 1.jpg" alt="BISHOP WISECARVER" class="img-responsive">
+            BISHOP WISECARVER
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BONFIGLIOLI">
+          <a href="Bonfiglioli" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BONFIGLIOLI 1.jpg" alt="BONFIGLIOLI" class="img-responsive">
+            BONFIGLIOLI
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BOSTON GEAR">
+          <a href="Bostongear" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BOSTON GEAR 1.jpg" alt="BOSTON GEAR" class="img-responsive">
+            BOSTON GEAR
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BROWNING">
+          <a href="Browning" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BROWNING1.jpg" alt="BROWNING" class="img-responsive">
+            BROWNING
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BUNTING">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Product-Catalog-01.19.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BUNTING 1.jpg" alt="BUNTING" class="img-responsive">
+            BUNTING
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="BROOKCROMPTON">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/ELECMOTORCAT2020.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/BROOKCROMPTON1.jpg" alt="BROOKCROMPTON" class="img-responsive">
+            BROOKCROMPTON
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="CITGO">
+          <a href="" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/CITGO 1.jpg" alt="CITGO" class="img-responsive">
+            CITGO
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="CLIMAX">
+          <a href="Climax" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/CLIMAX 1.jpg" alt="CLIMAX" class="img-responsive">
+            CLIMAX
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="CONSOLIDATED">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/CONSOLIDATED-Thrust-Bearings-Brand-Interchange.pdf.pdf.pdf" target="_blank" title="Consolidated">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/CONSOLIDATED 1.jpg" alt="CONSOLIDATED" class="img-responsive">
+            CONSOLIDATED
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="CONTINENTAL">
+          <a href="Continental" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/CONTINENTAL 1.jpg" alt="CONTINENTAL" class="img-responsive">
+            CONTINENTAL
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="CRAFT">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/craft_catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/CRAFT 1.jpg" alt="CRAFT" class="img-responsive">
+            CRAFT
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="CR SEALS">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/CRHANDBOOK.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/CR SEALS 1.jpg" alt="CR SEALS" class="img-responsive">
+            CR SEALS
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="CRC">
+          <a href="CRC" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/CRC 1.jpg" alt="CRC" class="img-responsive">
+            CRC
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="DANAHER">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/URS_Catalog_en-US_Rev2004.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/DANAHER 1.jpg" alt="DANAHER" class="img-responsive">
+            DANAHER
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="DICHTOMATIK">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Dichtomatik_RSS_Catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/DICHTOMATIK 1.jpg" alt="DICHTOMATIK" class="img-responsive">
+            DICHTOMATIK
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="DODGE">
+          <a href="Dodge" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/DODGE 1.jpg" alt="DODGE" class="img-responsive">
+            DODGE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="DOUGLAS">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Douglas_GeneralProducts-1.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/DOUGLASD.jpg" alt="DOUGLAS" class="img-responsive">
+            DOUGLAS
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="DRIVES">
+          <a href="Drives" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/DRIVES 1.jpg" alt="DRIVES" class="img-responsive">
+            DRIVES
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="EDT">
+          <a href="EDT" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/EDT 1.jpg" alt="EDT" class="img-responsive">
+            EDT
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="FALK">
+          <a href="Falk" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/FALK 1.jpg" alt="FALK" class="img-responsive">
+            FALK
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="FENNER">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Fenner Drives Full Catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/FENNER 1.jpg" alt="FENNER" class="img-responsive">
+            FENNER
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="FK Bearings">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/PrecisionRodEndsAndSpherical.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/FK BEARINGS.png" alt="FK Bearings" class="img-responsive">
+            FK Bearings
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="FORMSPRAG">
+          <a href="Formsprag" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/FORMSPRAG 1.jpg" alt="FORMSPRAG" class="img-responsive">
+            FORMSPRAG
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="FITTINGS UNLIMITED">
+          <a href="Fittingsunlimited" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/FITTINGS UNLIMITED 1.jpg" alt="FITTINGS UNLIMITED" class="img-responsive">
+            FITTINGS UNLIMITED
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="GARLOCK">
+          <a href="Garlock" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/GARLOCK 1.jpg" alt="GARLOCK" class="img-responsive">
+            GARLOCK
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="GATES">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/power-transmission-catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/GATES 1.jpg" alt="GATES" class="img-responsive">
+            GATES
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="GENERAL">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/0947488ecec83348.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/GENERAL 1.jpg" alt="GENERAL" class="img-responsive">
+            GENERAL
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="GG">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/G&G-Catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/GG 1.jpg" alt="GG" class="img-responsive">
+            GG
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="GL HUYETT">
+          <a href="Glhuyett" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/GL HUYETT 1.jpg" alt="GL HUYETT" class="img-responsive">
+            GL HUYETT
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="GROVE GEAR">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/8050E.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/GROVE GEAR 1.jpg" alt="GROVE GEAR" class="img-responsive">
+            GROVE GEAR
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="HARWAL">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/2019HarwalCatalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/HARWAL 1.jpg" alt="HARWAL" class="img-responsive">
+            HARWAL
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="HI LO">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/2018_hi-lo_cat_vs0405.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/HI LO 1.jpg" alt="HI LO" class="img-responsive">
+            HI LO
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="IDC SELECT">
+          <a href="IDC" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/IDC SELECT 1.jpg" alt="IDC SELECT" class="img-responsive">
+            IDC SELECT
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="IKO">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/IKO PRODUCT CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/IKO 1.jpg" alt="IKO" class="img-responsive">
+            IKO
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="IMI">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/NORGREN CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/IMI 1.jpg" alt="IMI" class="img-responsive">
+            IMI
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="INA FAG">
+          <a href="Inafag" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/INA FAG 1.jpg" alt="INA FAG" class="img-responsive">
+            INA FAG
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="IPTCI 1">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/IPTCI_catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/IPTCI 1.jpg" alt="IPTCI 1" class="img-responsive">
+            IPTCI 1
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="Isostatic 1">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/BRONZETU.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/Isostatic 1.jpg" alt="Isostatic 1" class="img-responsive">
+            Isostatic 1
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="JTEKT 1">
+          <a href="Jtekt" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/JTEKT 1.jpg" alt="JTEKT 1" class="img-responsive">
+            JTEKT 1
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="KOPFLEX">
+          <a href="Kopflex" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/KOPFLEX 1.jpg" alt="KOPFLEX" class="img-responsive">
+            KOPFLEX
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="KROIL">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/k1.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/KROIL 1.jpg" alt="KROIL" class="img-responsive">
+            KROIL
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="LEESON">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/MCC18017E_LEESON®_Products_Catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/LEESON 1.jpg" alt="LEESON" class="img-responsive">
+            LEESON
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="LEE LINEAR">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/LEE LINEAR CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/LEE LINEAR 1.jpg" alt="LEE LINEAR" class="img-responsive">
+            LEE LINEAR
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="LINKBELT">
+          <a href="Linkbelt" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/LINKBELT 1.jpg" alt="LINKBELT" class="img-responsive">
+            LINKBELT
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="LOCK N LUBE">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/LOCK N LUBE CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/LOCK_N_LUBE.png" alt="LOCK N LUBE" class="img-responsive">
+            LOCK N LUBE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="LOCTITE">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Adhesive-Sourcebook.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/LOCTITE 1.jpg" alt="LOCTITE" class="img-responsive">
+            LOCTITE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="LOVEJOY">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Full-Line-2016-Book-Rev-D2-NI-2.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/LOVEJOY 1.jpg" alt="LOVEJOY" class="img-responsive">
+            LOVEJOY
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="LUBRIPLATE">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/LUBRIPLATE CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/LUBRIPLATE 1.jpg" alt="LUBRIPLATE" class="img-responsive">
+            LUBRIPLATE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MARATHON">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Marathon_Century_Catalog_Form_MB0030E.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MARATHON 1.jpg" alt="MARATHON" class="img-responsive">
+            MARATHON
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MARTIN">
+          <a href="Martin" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MARTIN 1.jpg" alt="MARTIN" class="img-responsive">
+            MARTIN
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MBL">
+          <a href="MBL" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MBL 1.jpg" alt="MBL" class="img-responsive">
+            MBL
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MCGILL">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/McGill-Browning-Rollway-Sealmaster-Bearings.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MCGILL 1.jpg" alt="MCGILL" class="img-responsive">
+            MCGILL
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MFD">
+          <a href="MFD" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MFD 1.jpg" alt="MFD" class="img-responsive">
+            MFD
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MHS">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/MHSCAT.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MHS 1.jpg" alt="MHS" class="img-responsive">
+            MHS
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MOLINE">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/MOLINE BEARING CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MOLINE 1.jpg" alt="MOLINE" class="img-responsive">
+            MOLINE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MORSE">
+          <a href="Morse" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MORSE 1.jpg" alt="MORSE" class="img-responsive">
+            MORSE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="MYSTIK">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/MYSTIK CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/MYSTIK 1.jpg" alt="MYSTIK" class="img-responsive">
+            MYSTIK
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="NACHI">
+          <a href="Nachi" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/NACHI 1.jpg" alt="NACHI" class="img-responsive">
+            NACHI
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="NEXEN">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Nexen-Full-Catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/NEXEN 1.jpg" alt="NEXEN" class="img-responsive">
+            NEXEN
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="NIPPON">
+          <a href="Nippon" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/NIPPON 1.jpg" alt="NIPPON" class="img-responsive">
+            NIPPON
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="NORD">
+          <a href="Nord" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/NORD 1.jpg" alt="NORD" class="img-responsive">
+            NORD
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="NORTH AMERICAN ELECTRIC">
+          <a href="NorthAmericalElectric" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/NORTH AMERICAN ELECTRIC 1.jpg" alt="NORTH AMERICAN ELECTRIC" class="img-responsive">
+            NORTH AMERICAN ELECTRIC
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="NSK">
+          <a href="NSK" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/NSK 1.jpg" alt="NSK" class="img-responsive">
+            NSK
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="NTN">
+          <a href="NTN" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/NTN 1.jpg" alt="NTN" class="img-responsive">
+            NTN
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="OPTIBELT">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/OPTIBELT CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/OPTIBELT 1.jpg" alt="OPTIBELT" class="img-responsive">
+            OPTIBELT
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="PEER">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/PC600-Chain-Catalog-R10-072016.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/PEER 1.jpg" alt="PEER" class="img-responsive">
+            PEER
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="POBCO">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/POBCO_CATALOG_2022.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/POBCO 1.jpg" alt="POBCO" class="img-responsive">
+            POBCO
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="POSI LOCK">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/pt_posilockcatalog_us.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/POSI LOCK 1.jpg" alt="POSI LOCK" class="img-responsive">
+            POSI LOCK
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="PTI">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/PTI CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/PTI 1.jpg" alt="PTI" class="img-responsive">
+            PTI
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="RADICON">
+          <a href="Radicon" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/RADICON 1.jpg" alt="RADICON" class="img-responsive">
+            RADICON
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="RAMSEY">
+          <a href="Ramsey" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/RAMSEY 1.jpg" alt="RAMSEY" class="img-responsive">
+            RAMSEY
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="RBC">
+          <a href="RBC" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/RBC 1.jpg" alt="RBC" class="img-responsive">
+            RBC
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="REELCRAFT">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/reelcraft_catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/REELCRAFT 1.jpg" alt="REELCRAFT" class="img-responsive">
+            REELCRAFT
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="REGAL REXNORD">
+          <a href="" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/REGAL REXNORD 1.jpg" alt="REGAL REXNORD" class="img-responsive">
+            REGAL REXNORD
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="REXNORD">
+          <a href="Rexnord" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/REXNORD 1.jpg" alt="REXNORD" class="img-responsive">
+            REXNORD
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="ROYERSFORD">
+          <a href="Royersford" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/ROYERSFORD 1.jpg" alt="ROYERSFORD" class="img-responsive">
+            ROYERSFORD
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="RINGFEDER 1">
+          <a href="Ringfeder" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/RINGFEDER 1.jpg" alt="RINGFEDER 1" class="img-responsive">
+            RINGFEDER 1
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SAF T LOK">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/saf-t-lok_2010-literature.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SAF T LOK 1.jpg" alt="SAF T LOK" class="img-responsive">
+            SAF T LOK
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SEALMASTER">
+          <a href="Stealmaster" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SEALMASTER 1.jpg" alt="SEALMASTER" class="img-responsive">
+            SEALMASTER
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SEW">
+          <a href="Sew" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SEW 1.jpg" alt="SEW" class="img-responsive">
+            SEW
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SIMATEC">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/SIMALUBE CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SIMATEC 1.jpg" alt="SIMATEC" class="img-responsive">
+            SIMATEC
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SMALLEY">
+          <a href="Smalley" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SMALLEY 1.jpg" alt="SMALLEY" class="img-responsive">
+            SMALLEY
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SMITH BEARING">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Catalog2014.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SMITH BEARING 1.jpg" alt="SMITH BEARING" class="img-responsive">
+            SMITH BEARING
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SPEED CONTROL">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/SC1.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SPEED CONTROL 1.jpg" alt="SPEED CONTROL" class="img-responsive">
+            SPEED CONTROL
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SPX">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Ersatzteillisten-OTC-SPX-PowerTeam-mechanische-Abzieher.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SPX 1.jpg" alt="SPX" class="img-responsive">
+            SPX
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="STAFFORD">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/the-stafford-advantage" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/STAFFORD 1.jpg" alt="STAFFORD" class="img-responsive">
+            STAFFORD
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="STARCYL">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Star3_R04_03-16-23LR.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/STARCYL 1.jpg" alt="STARCYL" class="img-responsive">
+            STARCYL
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="STERLING">
+          <a href="Sterling" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/STERLING 1.jpg" alt="STERLING" class="img-responsive">
+            STERLING
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="STOBER">
+          <a href="Stober" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/STOBER 1.jpg" alt="STOBER" class="img-responsive">
+            STOBER
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="SYSTEM PLAST">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/system_plast_catalogue.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SYSTEM PLAST 1.jpg" alt="SYSTEM PLAST" class="img-responsive">
+            SYSTEM PLAST
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="TAPCO">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/TAPCO-CATALOGUE.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/TAPCO 1.jpg" alt="TAPCO" class="img-responsive">
+            TAPCO
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="TB WOODS">
+          <a href="Tbwoods" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/TB WOODS 1.jpg" alt="TB WOODS" class="img-responsive">
+            TB WOODS
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="THK">
+          <a href="THK" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/THK 1.jpg" alt="THK" class="img-responsive">
+            THK
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="THOMSON">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/RoundRail_LinearGuides_Components_cten.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/THOMSON 1.jpg" alt="THOMSON" class="img-responsive">
+            THOMSON
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="TIMKEN BELTS">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/Timken-Belts-Industrial-Power-Transmission-Belts-Catalog-10887.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/TIMKEN BELTS 1.jpg" alt="TIMKEN BELTS" class="img-responsive">
+            TIMKEN BELTS
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="TIMKEN">
+          <a href="Timken" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/TIMKEN 1.jpg" alt="TIMKEN" class="img-responsive">
+            TIMKEN
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="TOSHIBA">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/TOSHIBA CATALOG.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/TOSHIBA 1.jpg" alt="TOSHIBA" class="img-responsive">
+            TOSHIBA
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="UST">
+          <a href="Tsubaki" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/UST 1.jpg" alt="UST" class="img-responsive">
+            UST
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="US SEALS">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/US_Seal_Mfg_Catalog_2018.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/US SEALS 1.jpg" alt="US SEALS" class="img-responsive">
+            US SEALS
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="VACUFORCE">
+          <a href="Vacuforce" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/VACUFORCE 1.jpg" alt="VACUFORCE" class="img-responsive">
+            VACUFORCE
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="VANGORP">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/vg-catalog.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/VANGORP 1.jpg" alt="VANGORP" class="img-responsive">
+            VANGORP
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="WARNER ELECTRIC">
+          <a href="Wernerelectric" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/WARNER ELECTRIC 1.jpg" alt="WARNER ELECTRIC" class="img-responsive">
+            WARNER ELECTRIC
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="WINSMITH">
+          <a href="ASSETS/DOCUMENTS/CMS/EN/BrandsCatalogPdf/RD-Catalog_Final-Web-1.pdf" target="_blank" title="pdf" rel="noopener noreferrer">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/WINSMITH 1.jpg" alt="WINSMITH" class="img-responsive">
+            WINSMITH
+          </a>
+        </div>
+        <div class="catalog-item" data-brand="WORLDWIDE ELECTRIC">
+          <a href="Worldwideelectric" title="pdf">
+            <img src="ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/WORLDWIDE ELECTRIC 1.jpg" alt="WORLDWIDE ELECTRIC" class="img-responsive">
+            WORLDWIDE ELECTRIC
+          </a>
+        </div>
+      </div>
     </div>
-
     <script>
-        // JavaScript to implement the search functionality
-        document.getElementById('searchBar').addEventListener('keyup', function() {
-            const searchTerm = this.value.toLowerCase();
-            const catalogItems = parent.document.querySelectorAll('.catalog-item'); // Accessing parent document
-
-            catalogItems.forEach(function(item) {
-                const brand = item.getAttribute('data-brand').toLowerCase();
-                if (brand.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
+      // JavaScript to implement the search functionality
+      document.getElementById('searchBar').addEventListener('keyup', function() {
+        const searchTerm = this.value.toLowerCase();
+        const catalogItems = document.querySelectorAll('.catalog-item');
+        catalogItems.forEach(function(item) {
+          const brand = item.getAttribute('data-brand').toLowerCase();
+          if (brand.includes(searchTerm)) {
+            item.style.display = 'block';
+          }
+          else {
+            item.style.display = 'none';
+          }
+        }
+                            );
+      }
+                                                           );
     </script>
-</body>
+  </body>
 </html>
