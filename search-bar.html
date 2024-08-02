@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <style>
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .search-bar:focus {
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-bar-container">
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search for brands...">
+    </div>
+
+    <script>
+        // JavaScript to implement the search functionality
+        document.getElementById('searchBar').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const catalogItems = parent.document.querySelectorAll('.catalog-item'); // Accessing parent document
+
+            catalogItems.forEach(function(item) {
+                const brand = item.getAttribute('data-brand').toLowerCase();
+                if (brand.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
