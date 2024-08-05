@@ -50,7 +50,7 @@
         background-color: #ffffff;
       }
       .catalog-item {
-        flex: 0 0 calc(25% - 20px); /* Two items per row */
+        flex: 0 0 calc(30% - 20px); /* Two items per row */
         box-sizing: border-box;
         background-color: white;
         border-radius: 10px;
@@ -92,6 +92,9 @@
       @media (max-width: 768px) {
         .catalog-item {
           flex: 0 0 calc(100% - 20px); /* One item per row on small screens */
+        }
+        .catalog-item a {
+          font-size: 1em; /* Smaller font size for descriptions on mobile */
         }
       }
     </style>
