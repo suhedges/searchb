@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      Brands Catalog
-    </title>
+    <title>Brands Catalog</title>
     <style>
       body {
         font-family: Arial, sans-serif;
         background-color: #ffffff;
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
       }
       .container {
@@ -31,7 +29,8 @@
         margin-bottom: 30px;
       }
       .search-bar {
-        width: 50%;
+        width: 100%;
+        max-width: 500px;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 20px;
@@ -51,7 +50,7 @@
         background-color: #ffffff;
       }
       .catalog-item {
-        flex: 0 0 calc(16.66% - 20px);
+        flex: 0 0 calc(50% - 20px); /* Two items per row */
         box-sizing: border-box;
         background-color: white;
         border-radius: 10px;
@@ -89,6 +88,11 @@
       }
       .catalog-item a:hover {
         color: #007bff;
+      }
+      @media (max-width: 768px) {
+        .catalog-item {
+          flex: 0 0 calc(100% - 20px); /* One item per row on small screens */
+        }
       }
     </style>
   </head>
