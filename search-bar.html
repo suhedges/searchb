@@ -50,7 +50,7 @@
         background-color: #ffffff;
       }
       .catalog-item {
-        flex: 0 0 calc(30% - 20px); /* Two items per row */
+        flex: 0 0 calc(30% - 20px); 
         box-sizing: border-box;
         background-color: white;
         border-radius: 10px;
@@ -91,7 +91,7 @@
       }
       @media (max-width: 768px) {
         .catalog-item {
-          flex: 0 0 calc(100% - 20px); /* One item per row on small screens */
+          flex: 0 0 calc(100% - 20px); 
         }
         .catalog-item a {
           font-size: .75em !important;
@@ -683,6 +683,11 @@
             SAF T LOK
           </a>
         </div>
+        <div class="catalog-item" data-brand="SCHEERER">
+            <img src="https://www.tristate-bearing.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/scheerer.png" alt="SEALMASTER" class="img-responsive">
+            SEALMASTER
+          </a>
+        </div>
         <div class="catalog-item" data-brand="SEALMASTER">
           <a href="https://www.tristate-bearing.com/sealmaster" title="pdf" onclick="parent.window.location.href=this.href; return false;">
             <img src="https://www.tristate-bearing.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/BrandsCatalogLogos/SEALMASTER 1.jpg" alt="SEALMASTER" class="img-responsive">
@@ -842,7 +847,7 @@
       </div>
     </div>
     <script>
-      // JavaScript to implement the search functionality
+      // search function
       document.getElementById('searchBar').addEventListener('keyup', function() {
         const searchTerm = this.value.toLowerCase();
         const catalogItems = document.querySelectorAll('.catalog-item');
